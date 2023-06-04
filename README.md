@@ -11,13 +11,13 @@ In image analysis, the Fourier coefficients (an and bn) represent the contributi
 
 There are some steps you need to follow while applying the Fast Fourier Transformation to the images.
 
-Pre-processing of images
+1. Pre-processing of images
 Before we get to the main part, we need to ensure that the image is ready to be analyzed using Fourier Transform. For this, we perform preprocessing of the image using Python imaging libraries like OpenCV or PIL. The preprocessing steps include resizing the image to a specific size, if required, and converting it to greyscale. Now the image is ready for Fourier Transform.
 
 
-Applying the Fourier Transform
+2. Applying the Fourier Transform
 The Fourier transform serves as the foundation of frequency analysis in the image domain. By converting the image from the spatial domain to the frequency domain, we can recognize the contribution of different frequencies to the overall image. We can use libraries like NumPy or OpenCV to transform the image into a numerical representation, more like an array. The Fourier transform can then be applied using functions such as np.fft.fft2(). This spectrum can be centralized by shifting the zero frequency component to the center of the spectrum using np.fft.fftshift(), which facilitates a more intuitive visualization of the frequency content. This leaves us with visualizing the decomposition of the image into its frequencies.
 
 
-Visualizing the frequency spectrum
+3. Visualizing the frequency spectrum
 To visualize the frequency components of the image, we make use of Python's powerful plotting libraries, such as Matplotlib. By obtaining the magnitude spectrum computed by the Fourier transform, we can examine the frequency distribution across the image. Using plt.imshow(), we can generate a 2D plot, representing the magnitude spectrum as shades of gray. Brighter regions in the spectrum indicate higher amplitudes or stronger frequencies, while darker regions indicate lower amplitudes or weaker frequencies.
